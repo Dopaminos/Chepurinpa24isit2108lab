@@ -8,7 +8,8 @@ import lombok.ToString;
 @Getter
 @Setter
 @Builder
-@ToString
+
+
 public class Bank {
 
     private Long id;
@@ -20,5 +21,19 @@ public class Bank {
     private Integer bankRating;
     private Double totalMoney;
     private Double interestRate;
+    @Override
+    public String toString() {
+        return "Bank {" +
+                "\nid=" + id +
+                ", \nname='" + name + '\'' +
+                ", \nofficeAmount=" + officeAmount +
+                ", \nAtmAmount=" + AtmAmount +
+                ", \nemployeeAmount=" + employeeAmount +
+                ", \ncustomerAmount=" + customerAmount +
+                ", \nbankRating=" + bankRating +
+                ", \ntotalMoney=" + totalMoney +
+                ", \ninterestRate=" + interestRate +
+                "\n}";
+    }
 }
 

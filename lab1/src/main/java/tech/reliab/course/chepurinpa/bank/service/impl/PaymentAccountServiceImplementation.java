@@ -7,13 +7,15 @@ import tech.reliab.course.chepurinpa.bank.service.PaymentAccountService;
 
 public class PaymentAccountServiceImplementation implements PaymentAccountService {
     @Override
-    public PaymentAccount createPaymentAccount(Long id, User user, Double balance, Bank bank) {
-        return PaymentAccount.builder()
+    public PaymentAccount createPaymentAccount(Long id, User user, Bank bank) {
+        PaymentAccount paymentAccount = PaymentAccount.builder()
                 .id(id)
                 .user(user)
                 .bankName(bank.getName())
-                .balance(balance)
+                .balance(0.0)
                 .build();
+        user.getPaymentAccounts().add(paymentAccount);
+        return paymentAccount;
     }
 
 }

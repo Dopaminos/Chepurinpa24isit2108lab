@@ -8,7 +8,9 @@ import java.util.List;
 
 public interface UserService {
     User createUser(Long id,
-                    String fullName,
+                    String name,
+                    String surname,
+                    String middleName,
                     LocalDate dateOfBirth,
                     String placeOfWork,
                     List<Bank> banks);

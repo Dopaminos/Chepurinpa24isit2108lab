@@ -22,4 +22,21 @@ public class BankAtm {
     private Boolean isWorkingDeposit;
     private Double totalMoney;
     private Double maintenanceCost;
+
+    @Override
+    public String toString() {
+        return "BankAtm {" +
+                "\nid=" + id +
+                ", \nname='" + name + '\'' +
+                ", \naddress='" + address + '\'' +
+                ", \nstatus='" + status + '\'' +
+                ", \nbank's id=" + bank.getId() +
+                ", \nbankOffice's id=" + bankOffice.getId() +
+                ", \nservingEmployee's id=" + servingEmployee.getId() +
+                ", \nisWorkingWithdraw=" + isWorkingWithdraw +
+                ", \nisWorkingDeposit=" + isWorkingDeposit +
+                ", \ntotalMoney=" + totalMoney +
+                ", \nmaintenanceCost=" + maintenanceCost +
+                "\n}";
+    }
 }

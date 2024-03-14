@@ -33,7 +33,7 @@ public class AtmServiceImplementation implements AtmService {
         bank.setAtmAmount(bank.getAtmAmount() + 1);
         bankOffice.setAtmAmount(bankOffice.getAtmAmount() + 1);
         if (bank.getTotalMoney() < totalMoney) {
-            throw new IllegalArgumentException("Денег в банке меньше, чем передаётся банкомату");
+            throw new IllegalArgumentException("Денег в банке меньше, чем в банкомате");
         } else {
             bankAtm.setTotalMoney(totalMoney);
         }

@@ -10,7 +10,9 @@ import java.time.LocalDate;
 public class EmployeeServiceImplementation implements EmployeeService {
     @Override
     public Employee createEmployee(Long id,
-                                   String fullName,
+                                   String name,
+                                   String surname,
+                                   String middleName,
                                    LocalDate dateOfBirth,
                                    String position,
                                    Bank bank,
@@ -18,9 +20,12 @@ public class EmployeeServiceImplementation implements EmployeeService {
                                    BankOffice bankOffice,
                                    Boolean issueCredit,
                                    Double salary) {
+        bank.setEmployeeAmount(bank.getEmployeeAmount() + 1);
         return Employee.builder()
                 .id(id)
-                .fullName(fullName)
+                .name(name)
+                .surname(surname)
+                .middleName(middleName)
                 .dateOfBirth(dateOfBirth)
                 .position(position)
                 .bank(bank)

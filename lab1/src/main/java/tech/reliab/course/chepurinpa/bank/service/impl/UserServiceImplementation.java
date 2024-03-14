@@ -12,14 +12,18 @@ import java.util.Random;
 public class UserServiceImplementation implements UserService {
     @Override
     public User createUser(Long id,
-                           String fullName,
+                           String name,
+                           String surname,
+                           String middleName,
                            LocalDate dateOfBirth,
                            String placeOfWork,
                            List<Bank> banks) {
         Random random = new Random();
         User user = User.builder()
                 .id(id)
-                .fullName(fullName)
+                .name(name)
+                .surname(surname)
+                .middleName(middleName)
                 .dateOfBirth(dateOfBirth)
                 .placeOfWork(placeOfWork)
                 .monthlyIncome(Math.round(random.nextDouble(10_000) * 100.0) / 100.0)
@@ -27,9 +31,8 @@ public class UserServiceImplementation implements UserService {
                 .creditAccounts(new ArrayList<>())
                 .paymentAccounts(new ArrayList<>())
                 .build();
-
         setCreditRating(user);
-
+        banks.forEach(bank -> bank.setCustomerAmount(bank.getCustomerAmount() + 1));
         return user;
     }
 

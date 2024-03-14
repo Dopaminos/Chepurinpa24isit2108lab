@@ -39,7 +39,9 @@ public class Main {
         );
         Employee employee = employeeService.createEmployee(
                 1L,
-                "Иван Иванов",
+                "Иван",
+                "Иванов",
+                "Иванович",
                 LocalDate.now(),
                 "Руководитель",
                 bank,
@@ -61,15 +63,16 @@ public class Main {
         );
         User user = userService.createUser(
                 1L,
-                "Алексей Иванов",
+                "Алексей",
+                "Иванов",
+                "Иванович",
                 LocalDate.now(),
-                "Москва",
+                "Пятёрочка",
                 List.of(bank)
         );
         PaymentAccount paymentAccount = paymentAccountService.createPaymentAccount(
                 1L,
                 user,
-                1.0,
                 bank
         );
         CreditAccount creditAccount = creditAccountService.createCreditAccount(

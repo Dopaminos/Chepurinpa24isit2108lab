@@ -1,9 +1,13 @@
 package  tech.reliab.course.chepurinpa.bank.service.impl;
 
+import lombok.Getter;
+import lombok.Setter;
 import  tech.reliab.course.chepurinpa.bank.entity.Bank;
 import  tech.reliab.course.chepurinpa.bank.entity.BankOffice;
 import tech.reliab.course.chepurinpa.bank.service.BankOfficeService;
 
+@Getter
+@Setter
 public class BankOfficeServiceImplementation implements BankOfficeService {
     @Override
     public BankOffice createBankOffice(Long id,
@@ -33,15 +37,16 @@ public class BankOfficeServiceImplementation implements BankOfficeService {
                 .build();
         if (bank.getTotalMoney() < totalMoney
         ) {
-            throw new IllegalArgumentException("Некорректное значение количества денег в банке");
+            throw new IllegalArgumentException("N/A денег в банке");
         } else {
             bankOffice.setTotalMoney(totalMoney);
         }
         if (AtmAmount > bank.getAtmAmount()) {
-            throw new IllegalArgumentException("Количество банкоматов в офисе больше, чем общее количество банкоматов у банка");
+            throw new IllegalArgumentException("Банкоматов в офисе больше общего числа банкоматов");
         } else {
             bankOffice.setAtmAmount(AtmAmount);
         }
+        bank.setOfficeAmount(bank.getOfficeAmount() + 1);
         return bankOffice;
     }
 

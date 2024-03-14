@@ -8,7 +8,6 @@ import lombok.ToString;
 @Getter
 @Setter
 @Builder
-@ToString
 public class BankOffice {
 
     private Long id;
@@ -22,4 +21,21 @@ public class BankOffice {
     private Boolean isWorkingDeposit;
     private Double totalMoney;
     private Double rentCost;
+
+    @Override
+    public String toString() {
+        return "BankOffice {" +
+                "\nid=" + id +
+                ", \nname='" + name + '\'' +
+                ", \naddress='" + address + '\'' +
+                ", \nisWorking=" + isWorking +
+                ", \nisAtmPlaceable=" + isAtmPlaceable +
+                ", \nAtmAmount=" + AtmAmount +
+                ", \nissueCredit=" + issueCredit +
+                ", \nisWorkingWithdraw=" + isWorkingWithdraw +
+                ", \ncisWorkingDeposit=" + isWorkingDeposit +
+                ", \ntotalMoney=" + totalMoney +
+                ", \nrentCost=" + rentCost +
+                "\n}";
+    }
 }

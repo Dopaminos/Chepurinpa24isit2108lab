@@ -8,7 +8,9 @@ import java.time.LocalDate;
 
 public interface EmployeeService {
     Employee createEmployee(Long id,
-                            String fullName,
+                            String name,
+                            String surname,
+                            String middleName,
                             LocalDate dateOfBirth,
                             String position,
                             Bank bank,
