@@ -24,7 +24,7 @@ public class BankOffice {
 
     @Override
     public String toString() {
-        return "BankOffice {" +
+        return "BankOffice: " +
                 "\nid=" + id +
                 ", \nname='" + name + '\'' +
                 ", \naddress='" + address + '\'' +

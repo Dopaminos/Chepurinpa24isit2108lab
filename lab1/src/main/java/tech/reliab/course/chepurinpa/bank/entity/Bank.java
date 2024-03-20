@@ -22,7 +22,7 @@ public class Bank {
     private Double interestRate;
     @Override
     public String toString() {
-        return "Bank {" +
+        return "Bank:" +
                 "\nid=" + id +
                 ", \nname='" + name + '\'' +
                 ", \nofficeAmount=" + officeAmount +
@@ -32,7 +32,7 @@ public class Bank {
                 ", \nbankRating=" + bankRating +
                 ", \ntotalMoney=" + totalMoney +
                 ", \ninterestRate=" + interestRate +
-                "\n}";
+                "\n";
     }
 }
 

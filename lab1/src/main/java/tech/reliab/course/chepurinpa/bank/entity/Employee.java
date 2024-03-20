@@ -26,7 +26,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee {" +
+        return "Employee: " +
                 "\nid=" + id +
                 ", \nname='" + name + '\'' +
                 ", \nsurname='" + surname + '\'' +
@@ -38,6 +38,6 @@ public class Employee {
                 ", \nbankOffice's id=" + bankOffice.getId() +
                 ", \nissueCredit=" + issueCredit +
                 ", \nsalary=" + salary +
-                "\n}";
+                "\n";
     }
 }

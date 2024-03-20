@@ -26,7 +26,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User {" +
+        return "User: " +
                 "\nid=" + id +
                 ", \nname='" + name + '\'' +
                 ", \nsurname='" + surname + '\'' +
@@ -38,6 +38,6 @@ public class User {
                 ", \ncreditAccounts' ids=" + creditAccounts.stream().map(CreditAccount::getId).toList() +
                 ", \npaymentAccounts' ids=" + paymentAccounts.stream().map(PaymentAccount::getId).toList() +
                 ", \ncreditRating=" + creditRating +
-                "\n}";
+                "\n";
     }
 }

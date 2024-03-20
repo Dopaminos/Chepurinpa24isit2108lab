@@ -24,7 +24,7 @@ public class BankAtm {
 
     @Override
     public String toString() {
-        return "BankAtm {" +
+        return "ATM:" +
                 "\nid=" + id +
                 ", \nname='" + name + '\'' +
                 ", \naddress='" + address + '\'' +
@@ -36,6 +36,6 @@ public class BankAtm {
                 ", \nisWorkingDeposit=" + isWorkingDeposit +
                 ", \ntotalMoney=" + totalMoney +
                 ", \nmaintenanceCost=" + maintenanceCost +
-                "\n}";
+                "\n";
     }
 }
